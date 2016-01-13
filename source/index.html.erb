@@ -23,14 +23,14 @@ title: Welcome to TheShelf
   </div>
 
   <p class="doc">
-    <%= link_to "Create my own Shelf", "", id: "checkoutButton", target: "_blank" %>
+    <%= link_to "Create my own Shelf", "/", id: "checkoutButton" %>
   </p>
 </div>
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
   var handler = StripeCheckout.configure({
-    key: 'pk_live_aNlwiHqOdzrS60XISchkdjr2,
+    key: 'pk_live_aNlwiHqOdzrS60XISchkdjr2',
     image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
     locale: 'auto',
     token: function(token) {
