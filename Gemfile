@@ -10,4 +10,4 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
 gem "middleman", ">= 4.0.0"
-gem "middleman-deploy", git: "https://github.com/middleman-contrib/middleman-deploy.git"
+gem "middleman-gh-pages"
