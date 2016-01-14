@@ -22,35 +22,28 @@ title: Welcome to TheShelf
     </p>
   </div>
 
-  <p class="doc">
-    <%= link_to "Create my own Shelf", "/", id: "checkoutButton" %>
-  </p>
+  <form id="payment-form" action="https://theshelf-payments.herokuapp.com" method="POST">
+    <script
+      src="https://checkout.stripe.com/checkout.js"
+      class="stripe-button"
+      data-key="pk_live_aNlwiHqOdzrS60XISchkdjr2"
+      data-amount="100"
+      data-currency="EUR"
+      data-panel-label="Subscribe"
+      data-label="Create my own Shelf"
+      data-description="Beta Version (€1 per month)"
+      data-name="TheShelf"
+      data-allow-remember-me="false"
+      data-image="https://stripe.com/img/documentation/checkout/marketplace.png",
+    ></script>
+    <input name="amount" value="100" type="hidden">
+  </form>
 </div>
 
-<script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
-  var handler = StripeCheckout.configure({
-    key: 'pk_live_aNlwiHqOdzrS60XISchkdjr2',
-    image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
-    locale: 'auto',
-    token: function(token) {
+  document.addEventListener("DOMContentLoaded", function(event) {
+    if(window.location.search.match(/success/)) {
       alert("Thanks! Keep a lookout for an email from us with further instructions.");
     }
   });
-
-  document.getElementById("checkoutButton").addEventListener("click", function(e) {
-    handler.open({
-      name: 'TheShelf',
-      description: 'Beta Version (€1 per month)',
-      currency: "EUR",
-      panelLabel: "Subscribe",
-      amount: 100,
-      allowRememberMe: false
-    });
-    e.preventDefault();
-  });
-
-  window.onpopstate = function() {
-    handler.close();
-  }
 </script>
