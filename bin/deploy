@@ -1,6 +1,6 @@
 bundle exec middleman build
-cd build
+cd ../build
 git add -A
 git commit -m "update gh-pages"
 git push
-cd ..
+cd -
