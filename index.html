@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <link href="/images/favicon.ico" rel="icon" type="image/ico" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Welcome to TheShelf</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+
+    <link href="stylesheets/site.css" rel="stylesheet" />
+    <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index">
+    <div class="welcome">
+  <div class="logo">
+    <img src="images/logo.png" />
+  </div>
+
+  <div class="explanation">
+    <p>
+      The Shelf is an online library for small companies to keep track of their
+      books and to create discussion around knowledge.
+    </p>
+
+    <p>
+      If you'd like to know more about it, I'd be glad to have a chat with you.
+    </p>
+
+    <p>
+      You can reach me here: <span class="contact">zamith@subvisual.co</span>
+    </p>
+  </div>
+
+  <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js"></script>
+  <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=8EMRYNFAEV3AA"
+      data-button="subscribe"
+      data-name="TheShelf Beta Version"
+      data-amount="1000"
+      data-a3="1"
+      data-p3="1"
+      data-t3="M"
+      data-currency="EUR"
+      data-period="M"
+      data-callback="https://subvisual.github.io/theshelf_marketing_page/?result=success"
+  ></script>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    if(window.location.search.match(/success/)) {
+      alert("Thanks! Keep a lookout for an email from us with further instructions.");
+    }
+  });
+</script>
+
+  </body>
+</html>
