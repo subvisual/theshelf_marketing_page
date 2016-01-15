@@ -22,22 +22,18 @@ title: Welcome to TheShelf
     </p>
   </div>
 
-  <form id="payment-form" action="https://theshelf-payments.herokuapp.com" method="POST">
-    <script
-      src="https://checkout.stripe.com/checkout.js"
-      class="stripe-button"
-      data-key="pk_live_aNlwiHqOdzrS60XISchkdjr2"
-      data-amount="100"
+  <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js"></script>
+  <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=8EMRYNFAEV3AA"
+      data-button="subscribe"
+      data-name="TheShelf Beta Version"
+      data-amount="1000"
+      data-a3="1"
+      data-p3="1"
+      data-t3="M"
       data-currency="EUR"
-      data-panel-label="Subscribe"
-      data-label="Create my own Shelf"
-      data-description="Beta Version (€1 per month)"
-      data-name="TheShelf"
-      data-allow-remember-me="false"
-      data-image="https://stripe.com/img/documentation/checkout/marketplace.png",
-    ></script>
-    <input name="amount" value="100" type="hidden">
-  </form>
+      data-period="M"
+      data-callback="https://subvisual.github.io/theshelf_marketing_page/?result=success"
+  ></script>
 </div>
 
 <script>
